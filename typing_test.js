@@ -1,4 +1,4 @@
-const originText = document.querySelector("#text-provided p").innerHTML;
+var originText = document.querySelector("#text-provided p").innerHTML;
 const typingArea = document.querySelector("#typing-area");
 const clock = document.querySelector("#clock");
 const resetButton = document.querySelector("#reset");
@@ -6,6 +6,23 @@ const resetButton = document.querySelector("#reset");
 var timer = [0,0,0,0];
 var interval;
 var timerRunning = false;
+var string = "whats sup";
+
+// fucntion to randomly chose words
+// function randomWords(){
+// 	var letters = "abcdefghijklmnopqrstuvwxyz";
+// 	var words = "";
+// 	var word = "";
+// 	for(var i = 0; i < Math.floor(Math.random() * 10); i++){
+// 		word += letters.charAt(Math.floor(Math.random() * letters.length));
+
+// 		for(var j = 1; j < Math.floor(Math.random() * 12); j++){
+// 			words += word + " ";
+// 		}
+// 	}
+// 	string = words + "."; 
+
+// }
 
 // spelling check of typed text with the originText
 function spellCheck() {
@@ -15,6 +32,7 @@ function spellCheck() {
 	if (textEntered == originText) {
 		clearInterval(interval);
 		typingArea.style.borderColor = "#00FA21";
+
 	}
 	else {
 		if(textEntered == originTextMatch){
@@ -65,6 +83,8 @@ function reset() {
 	typingArea.value = "";
 	clock.innerHTML = "00:00:00";
 	typingArea.style.borderColor = "gray";
+	originText = "new test text";
+	 
 }
 
 // event listeners
