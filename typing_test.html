@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<!-- Head of the page -->
+	<head>
+		<title>Typing Test App</title>
+		<link rel="stylesheet" type="text/css" href="typing_test.css">
+		<script src="typing_test.js" async></script>
+	</head>
+
+	<!-- body of the page-->
+	<body>
+
+		<!-- Header section -->
+		<div class="header">
+			<div class="container1">
+				<h1>Test your typing speed</h1>
+			</div>
+		</div>
+		<!-- instruction section -->
+		<div class="instruction">
+			<div class="container2">
+				<p>This is a typing test. Please type the text that is provided EXACTLY as is shown. The timer starts when you start typing and stops when your text matches exactly as the one provided to you. Good Luck!</p>
+			</div>
+		</div>
+		<!-- game area -->
+		<div class="game">
+			<div class="container3">
+				<!-- place where the text is shown -->
+				<div id="text-provided">
+					<p>The text will be provided here.</p>
+				</div>
+				<!-- where the user will type -->
+				<div class="typing-area">
+					<textarea id="typing-area" name="textarea" placeholder="The clock will start when you start typing."></textarea>
+				</div>
+				<!-- timer and reset button -->
+				<div class="support">
+					<div class="timer">
+						<div id="clock">00:00:00</div>
+					</div>
+					
+					<button id="reset">Start Over</button>
+					
+				</div>
+			</div>
+		</div>
+
+
+
+	</body>
+</html>
