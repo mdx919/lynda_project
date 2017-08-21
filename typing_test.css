@@ -41,7 +41,7 @@ body {
 
 /*game section*/
 .game {
-	margin-top: 10px;
+	margin-top: 20px;
 }
 
 .container3 {
@@ -50,16 +50,16 @@ body {
 	margin: 0 auto;
 }
 
-.text-provided {
+#text-provided {
 	width: 100%;
 	height: 40px;
 	text-align: center;
 	padding: 17px 0;
-	background-color: gray;
+	background-color: #E9CA97;
 	font-size: 20px;
 }
 
-.text-provided p {
+#text-provided p {
 	padding: 5px 0;
 }
 
