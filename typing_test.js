@@ -1,4 +1,4 @@
-const originText = document.querySelector("#text-provided p").innerHTML;
+var originText = document.querySelector("#text-provided p").innerHTML;
 const typingArea = document.querySelector("#typing-area");
 const clock = document.querySelector("#clock");
 const resetButton = document.querySelector("#reset");
@@ -27,6 +27,7 @@ function randomWords(){
 
 // spelling check of typed text with the originText
 function spellCheck() {
+	console.log(originText);
 	let textEntered = typingArea.value;
 	let originTextMatch = originText.substring(0, textEntered.length);
 
@@ -84,7 +85,9 @@ function reset() {
 	typingArea.value = "";
 	clock.innerHTML = "00:00:00";
 	typingArea.style.borderColor = "gray";
-	originText = $("#text-provided p").html(randomWords());
+	
+	originText = randomWords();
+	$("#text-provided p").html(originText);
 }
 
 // event listeners
